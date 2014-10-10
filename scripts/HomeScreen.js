@@ -85,6 +85,8 @@ var HomeScreen = {
             self.$recommendations.find('.help-box.not-logged-in').show();
         } else if (!UserManager.currentUser.lastfmUserName) {
             self.$recommendations.find('.help-box.not-connected-to-lastfm').show();
+        } else if (!UserManager.currentUser.soundcloudUserName) {
+            self.$recommendations.find('.help-box.not-connected-to-soundcloud').show();
         } else {
             Recommendations.findRecommendedArtists(function(artists) {
                 $.each(artists, function(i, artist) {

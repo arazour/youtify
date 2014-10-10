@@ -120,6 +120,9 @@ handlers:
 - url: /unsubscribe
   script: mail.app
 
+- url: /soundcloud/.*
+  script: soundcloud.app
+
 - url: /soundcloud_id_to_permalink
   script: soundcloud_id_to_permalink.app
 

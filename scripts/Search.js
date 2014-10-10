@@ -217,6 +217,7 @@ var Search = {
         ret = [];
         $.each(data, function(i, track) {
             var buyLinks = track.purchase_url ? [track.purchase_url] : null;
+            var uploaderUsername = track.user ? track.user.permalink : ''
             ret.push(new Video({
                 parent: 'search',
                 onPlayCallback: Search.onPlayCallback,
@@ -224,7 +225,7 @@ var Search = {
                 title: track.title,
                 duration: track.duration,
                 buyLinks: buyLinks,
-                uploaderUsername: track.user.permalink,
+                uploaderUsername: uploaderUsername,
                 type: 'soundcloud',
                 artworkURL: track.artwork_url
             }));

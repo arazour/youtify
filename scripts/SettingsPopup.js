@@ -13,6 +13,16 @@ var SettingsPopup = {
                 $('<a class="action connect translatable" href="/lastfm/connect"></a>').text(TranslationSystem.get('Connect')).appendTo('#settings .connections .lastfm .account');
                 $('#settings .connections .lastfm .settings input[name=lastfm_scrobble_automatically]').attr('disabled', 'disabled');
             }
+
+            if (UserManager.currentUser.soundcloudUserName) {
+                $('<a class="title" target="_blank"></a>').attr('href', 'https://soundcloud.com/' + UserManager.currentUser.soundcloudUserName).text(UserManager.currentUser.soundcloudUserName).appendTo('#settings .connections .soundcloud .account');
+                $('<a class="action disconnect translatable" href="/soundcloud/disconnect"></a>').text(TranslationSystem.get('Disconnect')).appendTo('#settings .connections .soundcloud .account');
+                $('.connections .soundcloud').addClass('sc-connected');
+            } else {
+                $('<span class="title">Soundcloud</span>').appendTo('#settings .connections .soundcloud .account');
+                $('<a class="action connect translatable" href="/soundcloud/connect"></a>').text(TranslationSystem.get('Connect')).appendTo('#settings .connections .soundcloud .account');
+                $('.connections .soundcloud').addClass('sc-disconnected');
+            }
             
             // DROPBOX
             if (UserManager.currentUser.dropboxUserName) {

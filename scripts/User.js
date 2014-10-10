@@ -4,6 +4,7 @@ function User(args) {
     self.nickname = args.nickname;
     self.displayName = args.displayName;
     self.lastfmUserName = args.lastfm_user_name;
+    self.soundcloudUserName = args.soundcloud_user_name;
     self.dropboxUserName = args.dropbox_user_name;
     self.email = args.email;
     self.largeImageUrl = args.largeImageUrl;

@@ -130,6 +130,7 @@
         <script src="/scripts/Logo.js"></script>
         <script src="/scripts/Filter.js"></script>
         <script src="/scripts/Dropbox.js"></script>
+        <script src="/scripts/Stream.js"></script>
         <script src="/scripts/FullScreen.js"></script>
         <script src="/scripts/WindowEvents.js"></script>
         <script src="/scripts/SyncManager.js"></script>
@@ -188,6 +189,10 @@
                             <input type="checkbox" name="lastfm_scrobble_automatically" />
                             <label for="lastfm_scrobble_automatically" class="translatable">Automatically scrobble songs to Last.fm after they finish playing</label>
                         </div>
+                    </div>
+                </div>
+                <div class="connection soundcloud">
+                    <div class="account">
                     </div>
                 </div>
                 <div class="connection dropbox">
@@ -377,6 +382,21 @@
                         <div class="content">
                         </div>
                     </div>
+
+                    <div class="pane stream">
+                        <div class="help-box not-logged-in">
+                            <h2 class="translatable">You are not logged in</h2>
+                            <div class="translatable">You need to log in to get your soundcloud stream.</div>
+                        </div>
+                        <div class="help-box not-connected-to-soundcloud">
+                            <h2 class="translatable">You are not connected to Soundcloud</h2>
+                            <div class="translatable">You need to connect your Soundcloud account to get your stream.</div>
+                            <a class="button exposed" href="/soundcloud/connect">Connect with Soundcloud</a>
+                        </div>
+                        <div class="content">
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="queue">
@@ -397,6 +417,10 @@
                 <div class="recommendations">
                     <table class="tracklist"></table>
                     <div class="artists"></div>
+                </div>
+
+                <div class="stream">
+                    <table class="tracklist"></table>
                 </div>
 
                 <div class="playlists droppable">

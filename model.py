@@ -28,6 +28,8 @@ class YoutifyUser(db.Model):
     lastfm_user_name = db.StringProperty()
     lastfm_access_token = db.StringProperty()
     lastfm_scrobble_automatically = db.BooleanProperty(default=True)
+    soundcloud_user_name = db.StringProperty()
+    soundcloud_access_token = db.StringProperty()
     youtube_username = db.StringProperty()
     dropbox_access_token = db.StringProperty()
     dropbox_user_name = db.StringProperty()
@@ -163,6 +165,7 @@ def get_youtify_user_struct(youtify_user_model, include_private_data=False):
         'id': str(youtify_user_model.key().id()),
         'email': None,
         'lastfm_user_name': youtify_user_model.lastfm_user_name,
+        'soundcloud_user_name': youtify_user_model.soundcloud_user_name,
         'dropbox_user_name': youtify_user_model.dropbox_user_name,
         'displayName': get_display_name_for_youtify_user_model(youtify_user_model),
         'nr_of_followers': youtify_user_model.nr_of_followers,

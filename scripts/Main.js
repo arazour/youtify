@@ -87,6 +87,7 @@ $(document).ready(function() {
         ExternalUserPage.init();
         ExternalUserManager.init();
         Dropbox.init();
+        Stream.init();
         URIManager.init();
         FullScreen.init();
         Mobile.init();

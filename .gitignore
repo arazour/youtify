@@ -9,3 +9,5 @@ config.py
 *~
 .c9revisions
 /make/node_modules
+
+.idea

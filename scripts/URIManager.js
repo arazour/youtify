@@ -111,6 +111,12 @@ var URIManager = {
                     Dropbox.getMenuItem().select();
                 }
             ],
+            [
+                '/stream',
+                function(matches) {
+                    Stream.getMenuItem().select();
+                }
+            ],
 
             [
                 '/(.+)',
